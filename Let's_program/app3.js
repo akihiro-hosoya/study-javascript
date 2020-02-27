@@ -158,4 +158,4 @@ if(typeof num100==="number"){
 var str2;
 str2 = "目覚まし" + "時計";
 var str3;
-str3 = ""
+str3 = "200" + 9;
