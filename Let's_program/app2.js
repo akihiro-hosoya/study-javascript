@@ -521,4 +521,200 @@ lastIndexOf(str[, start])
 
 
 
-// Booleanクラス
+// Booleanクラス コンストラクタ関数は次の1つが用意
+/*
+Boonlean(val)
+val : 論理値または論理値以外の値
+*/
+var bool_obj;
+document.write("<p>");
+bool_obj = new Boolean(true);
+print(bool_obj);
+bool_obj = new Boolean(1);
+print(bool_obj);
+bool_obj = new Boolean(0);
+print(bool_obj);
+document.write("</p>");
+// toStringクラス
+// valueOfクラス
+
+
+
+// Arrayクラス
+// Array() Array(int) Array(val1, val2, ..., valn)
+/*
+int:要素の数 / val:要素の値
+例外 : RangeError  要素の数に負の値か最大の数を越えた値を指定した場合
+*/
+document.write("<p>");
+var ary = new Array("東京", "大阪", "名古屋");
+for (var i = 0 ; i < ary.length ; i++){
+    print("array[" + i + "] = " + ary[i]);
+}
+document.write("</p>");
+
+document.write("<p>");
+try{
+    var ary2 = new Array(-1);
+}catch(e){
+    print(e);
+}
+document.write("</p>");
+
+// lengthプロパティ a.length
+// 配列の最後のインデックス+1を返す
+
+// toStringメソッド　toString()
+// オブジェクトを文字列に変換した結果を返す
+
+// toLocaleStringメソッド　toLocaleDtring()
+// Arrayクラスのオブジェクトが表す数値のロケールに応じた文字列表現
+
+// joinメソッド　join() / join(str)
+/*
+str  連結する時のセパレータ文字列
+戻り値：間に連結された文字列
+*/
+
+// sortメソッド sort() / sort(func)
+// オブジェクトの各要素をアルファベット順に並べ替え
+/*
+func  並べ替えを決定するための関数
+戻り値：対象のArrayクラスのオブジェクトへの参照
+*/
+
+// reverseメソッド reverse()
+// 各要素を現在と逆の順序に並べ替え
+/*
+戻り値：対象のArrayクラスのオブジェクトへの参照
+*/
+
+// sliceメソッド　slice(start[, end])
+// 配列の中の指定された範囲の部分配列を返す
+/*
+start  開始インデックス
+end  終了インデックス
+戻り値:指定された範囲の部分配列戻り値
+*/
+
+
+
+// Dateクラス
+// コンストラクタ関数
+/*
+Date()
+Date(ms)
+Date(str)
+Date(year, month[, day, hour, min, sec, ms])
+
+ms  日付と時刻をミリ秒で指定
+str  日付と時刻を表す文字列で指定
+year  年
+month  月
+day  日
+hour  時
+min  分
+sec  秒
+ms  ミリ秒
+
+Dateクラスの内部では、1970年1月1日0時0分0秒(UTC)を起点とした経過ミリ秒という数値だけを持っているようです。
+その値を呼び出されるメソッドに応じて現地時間のタイムゾーンで表示したりします。
+*/
+document.write("<p>");
+print(new Date());
+print(new Date(18000));
+print(new Date("2009/08/10 14:24:32"));
+print(new Date("2009/08/10 14:24:32 GMT-0800"));
+print(new Date("2009/08/10 14:24:32 UTC-0800"));
+print(new Date(2005, 3));
+document.write("</p>");
+
+
+// toStringメソッド toString()
+// Dateクラスのオブジェクトを文字列に変換した結果を返す
+// 戻り値：Dateクラスのオブジェクトが表す日付/時刻の文字列表現
+
+// toDateStringメソッド  toDateStringメソッド
+// Dateクラスのオブジェクトの文字列に変換した結果の中で日付部分を返す
+// 戻り値：Dateクラスのオブジェクトが表す日付の文字列表現
+
+// toTimeStringメソッド toTimeStringメソッド
+// Dateクラスのオブジェクトの文字列に変換した結果の中で時刻部分を返す
+// 戻り値：Dateクラスのオブジェクトが表す日付の文字列表現
+
+// toLocaleString / toLocaleDateString / toLocaleTimeStringメソッド
+/*
+Dateクラスのオブジェクトを文字列に変換した結果を返します。
+この時、現在のロケールに応じた形式で変換を行った結果を返す
+年月日がつく
+*/
+
+// toUTCString / toGMTStringメソッド
+// タイムゾーンとして現地時間ではなくUTC/GMTを使う
+
+// valueOfメソッド
+// 例：現在の日時/時刻が1970年1月1日0時0分0秒(UTC)から1,249,922,682,928ミリ秒経過したことを表している
+
+// UTCメソッド　Date.UTC(year, month[, day, hour, min, sec, ms])
+// UTCタイムゾーンで指定した日付/時刻の値をミリ秒形式の値に変換した値を返す
+
+// parseメソッド  Date.parse(str)　
+// 与えられた値から日付/時刻の値を解析し、取得した日付/時刻の値をミリ秒形式の値に変換した値を返す
+
+
+
+
+
+// Mathクラス
+// Mathクラス定数
+/*
+・対数
+Math.E         自然対数の底e
+Math.LN10      eを底とする10の対数
+Math.LN2       eを底とする2の対数
+Math.LOG10E    10を底とするeの対数
+Math.LOG2E     2を底とするeの対数
+・円周率
+Math.PI        円周率π
+・平方根
+Math.SQRT2      2の平方根
+Math.SQRT1_2    1/2の平方根
+*/
+
+// abs関数　Math.abs(val)
+// 絶対値を計算しその結果を返す
+
+// round関数　Math.round(val)
+// 戻り値：引数を四捨五入を計算した値
+
+// ceil関数  Math.ceil(val)
+// 小数点以下の切り上げ
+
+// floor関数　Math.floor(val)
+// 引数の小数点以下の値を切り捨てた結果
+
+// max関数 Math.max(val1, val2, ...)
+// 複数の値の中で最大の値を返す
+
+// min関数  Math.min(val1, val2, ...)
+// 複数の値の中で最小の値を返す
+
+// random関数  Math.ramdom()
+// 戻り値:0.0以上1.0未満の乱数
+
+// sqrt関数　　Math.sqrt()
+// 平方根を計算
+
+// pow関数　　Math.pow(x, n)
+/*
+x 底
+n 指数
+戻り値：xのn乗を計算した結果
+*/
+
+// log関数　Math.log(val)
+// 自然対数を計算した結果を返す
+
+// exp関数 Math.exp(val)
+// eの累乗を計算した結果を返す
+
