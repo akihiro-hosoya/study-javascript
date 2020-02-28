@@ -718,3 +718,52 @@ n 指数
 // exp関数 Math.exp(val)
 // eの累乗を計算した結果を返す
 
+
+
+
+
+// Functionクラス
+// コンストラクタ関数
+/*
+Function(arg1, arg2, ..., argn, body)
+arg : 引数  /  val : 関数の本体
+例外：SyntaxError  関数本体の中に構文エラーがあった場合
+*/
+
+// f.length
+// 関数定義で宣言された引数の数を返す
+
+// f.prototype
+// クラスのプロトタイプオブジェクトへの参照を返す
+
+// toStringメソッド
+// toString()
+// 戻り値：Functionクラスのオブジェクトが表す配列の文字列表現
+function plus(num1, num2){
+    return num1 + num2;
+}
+
+document.write("<p>");
+print(plus.toString());
+var minus = function(num1, num2){return num1 - num2;};
+print(minus.toString());
+document.write("</p>");
+
+
+
+// Argumentsクラス
+// arguments.length 関数に渡された引数の数を返す
+// arguments.callee 関数への参照を返す
+document.write("<p>");
+var func = function(n){
+　　　if (n == 0){
+    return 1;
+　　　}else{
+    return n * arguments.callee(n - 1);
+　　　}
+};
+print(func(2));
+print(func(3));
+print(func(4));
+print(func(5));
+document.write("</p>");
