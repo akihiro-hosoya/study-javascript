@@ -767,3 +767,23 @@ print(func(3));
 print(func(4));
 print(func(5));
 document.write("</p>");
+
+
+
+
+// confirm 確認ダイアログ
+function kakunin(){
+    ret = confirm("Googleへ移動します。よろしいですか？");
+    if (ret == true){
+    　  location.href = "http://www.google.co.jp/";
+    }
+}
+
+
+// prompt 入力ダイアログ
+function kakunin2(){
+    ret = prompt("URLを入力", "http://www.google.co.jp/");
+    if (ret != null){
+        location.href = ret;
+    }
+}
