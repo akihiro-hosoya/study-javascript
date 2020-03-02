@@ -159,3 +159,12 @@ var str2;
 str2 = "目覚まし" + "時計";
 var str3;
 str3 = "200" + 9;
+
+
+
+// setTimeout
+function openGoogle(){
+    window.open("http://www.google.co.jp/", "Google");
+}
+
+    setTimeout("openGoogle()", 3000);
